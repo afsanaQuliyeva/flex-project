@@ -1,0 +1,43 @@
+/*pseudo element -> before after*/
+/* :root -> pseudo selector (root element = html) */
+:root {
+--softBlue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+--blueMainBg: hsl(217, 54%, 11%);
+--blueCardBg: hsl(216, 50%, 16%);
+--blueLineBg: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*
+    16px -> 100%
+    10px -> 62.5%
+    */
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    /*font-size: 2rem; / 2 x root elem. font-size -> 32px*/
+    font-size: 1.8rem;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blueMainBg);
+    min-height: 100vh;
+}
+
+.card {
+    background-color: var(--blueCardBg);
+    max-width: 40rem;
+}
